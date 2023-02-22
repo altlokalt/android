@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="checkoutRowModel" type="com.altlokaltsapplication.app.modules.checkout.data.model.CheckoutRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearInfo"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+        <View
+            android:background="@drawable/rectangle_bg_gray_300_radius_8"
+            android:id="@+id/viewImage"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_marginBottom="@dimen/_21pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_56pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearContent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_14pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_weight="0.78" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDeliveryAddres"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{checkoutRowModel.txtDeliveryAddres}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/msg_delivery_addres"/>
+            <TextView android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:text="@{checkoutRowModel.txtLanguage}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_subrotho_1"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageGroup"
+            android:layout_height="@dimen/_12pxh"
+            android:layout_marginBottom="@dimen/_59pxv"
+            android:layout_marginEnd="@dimen/_27pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_width="@dimen/_2pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_group_black_900"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_group_black_900"/>
+    </LinearLayout>
+</layout>

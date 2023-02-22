@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myFavouritesRowModel" type="com.altlokaltsapplication.app.modules.myfavourites.data.model.MyFavouritesRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearTrendingFood"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+        <LinearLayout android:id="@+id/linearRowrecentlyadded"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecentlyAdded"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_weight="0.71" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{myFavouritesRowModel.txtRecentlyAdded}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_recently_added"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnSeeAll"
+                android:layout_height="@dimen/_24pxv"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_159pxh"
+                android:layout_width="@dimen/_53pxh"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_see_all"
+                android:textAllCaps="false"
+                style="@style/btnPoppinsregular16" tools:text="@string/lbl_see_all"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:buttonTint="@color/gray_300"
+                android:ellipsize="end" android:id="@+id/checkBoxImage"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_weight="0.15" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@string/lbl_check2"
+                android:textColor="@color/black_900"
+                android:textSize="@dimen/_8pxh" tools:text="@string/lbl_check2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_38pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_weight="0.85" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{myFavouritesRowModel.txtLanguage}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem2"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:buttonTint="@color/gray_300"
+                android:ellipsize="end"
+                android:id="@+id/checkBoxImageOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_weight="0.15" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@string/lbl_check1"
+                android:textColor="@color/black_900"
+                android:textSize="@dimen/_8pxh" tools:text="@string/lbl_check1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_38pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_weight="0.85" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{myFavouritesRowModel.txtLanguageOne}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestPageOneVM" type="com.altlokaltsapplication.app.modules.interestpageone.data.viewmodel.InterestPageOneVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearInterestPageO"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <LinearLayout android:id="@+id/linearNavbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50">
+            <ProgressBar android:id="@+id/progressBarProgress"
+                android:indeterminate="false"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_24pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_weight="0.77" android:layout_width="0dp"
+                android:max="100" android:minHeight="@dimen/_8pxv"
+                android:progress="33"
+                android:progressDrawable="@drawable/layer_list_bg_gray_52_radius_4" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtSkip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_14pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_187pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_weight="0.23" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageOneVM.interestPageOneModel.txtSkip}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_skip"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:gravity="start"
+            android:id="@+id/txtAreyouaveget"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_13pxh"
+            android:singleLine="true"
+            android:text="@{interestPageOneVM.interestPageOneModel.txtAreyouaveget}"
+            style="@style/txtPoppinsbold24" tools:text="@string/msg_are_you_a_veget"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:buttonTint="@color/gray_300"
+                android:ellipsize="end" android:id="@+id/checkBoxImage"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_17pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_weight="0.17" android:layout_width="0dp"
+                android:singleLine="true" android:text="@string/lbl_ja"
+                android:textColor="@color/black_900"
+                android:textSize="@dimen/_8pxh" tools:text="@string/lbl_ja"/>
+            <TextView android:id="@+id/txtYesHidealla"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_11pxv"
+                android:layout_marginEnd="@dimen/_70pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_weight="0.83" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:text="@{interestPageOneVM.interestPageOneModel.txtYesHidealla}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/msg_yes_hide_all_a"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem1"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_468pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:buttonTint="@color/gray_300"
+                android:ellipsize="end"
+                android:id="@+id/checkBoxImageOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_weight="0.16" android:layout_width="0dp"
+                android:singleLine="true" android:text="@string/lbl_nei"
+                android:textColor="@color/black_900"
+                android:textSize="@dimen/_8pxh" tools:text="@string/lbl_nei"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNoShowallre"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_66pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_weight="0.84" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageOneVM.interestPageOneModel.txtNoShowallre}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/msg_no_show_all_re"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="editAvatarRowModel" type="com.altlokaltsapplication.app.modules.editavatar.data.model.EditAvatarRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowavatar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <View
+            android:background="@drawable/rectangle_bg_gray_300_radius_40"
+            android:id="@+id/viewAvatarTwo1"
+            android:layout_height="@dimen/_80pxh" android:layout_width="@dimen/_80pxh"/>
+        <View
+            android:background="@drawable/rectangle_bg_gray_300_radius_40"
+            android:id="@+id/viewAvatarOne"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_marginStart="@dimen/_37pxh" android:layout_width="@dimen/_80pxh"/>
+        <View
+            android:background="@drawable/rectangle_bg_gray_300_radius_40"
+            android:id="@+id/viewAvatarTwo2"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_marginStart="@dimen/_37pxh" android:layout_width="@dimen/_80pxh"/>
+    </LinearLayout>
+</layout>

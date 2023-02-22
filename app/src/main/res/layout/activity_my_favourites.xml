@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myFavouritesVM" type="com.altlokaltsapplication.app.modules.myfavourites.data.viewmodel.MyFavouritesVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearMyFavourites"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_white_a700_radius_8"
+            android:gravity="center_horizontal"
+            android:id="@+id/searchViewForm"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewForm"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/msg_search_my_recip" app:searchIcon="@drawable/img_search_gray_400"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerMyFavourites"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_29pxh}" tools:itemCount="2" tools:listitem="@layout/row_my_favourites"/>
+        <ImageButton
+            android:background="@drawable/rectangle_bg_gray_900_radius_8"
+            android:id="@+id/btnGrid" android:layout_gravity="end"
+            android:layout_height="@dimen/_64pxh"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_50pxv"
+            android:layout_width="@dimen/_64pxh"
+            android:paddingHorizontal="@dimen/_26pxh"
+            android:paddingVertical="@dimen/_26pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_grid" tools:ignore="ContentDescription"/>
+        <LinearLayout android:id="@+id/linearBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                android:id="@+id/btnHome"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_marginBottom="@dimen/_37pxv"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_13pxh"
+                android:paddingVertical="@dimen/_13pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_home_48x48" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                android:id="@+id/btnComputer"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_marginBottom="@dimen/_37pxv"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_computer" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                android:id="@+id/btnCalendar"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_marginBottom="@dimen/_37pxv"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_calendar" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_900_radius_16"
+                android:id="@+id/btnFavorite"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_marginBottom="@dimen/_37pxv"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_13pxh"
+                android:paddingVertical="@dimen/_13pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                android:id="@+id/btnPrinter"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_marginBottom="@dimen/_37pxv"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_printer" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

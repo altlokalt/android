@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemSplashModel" type="com.altlokaltsapplication.app.modules.itemsplash.data.model.DrawerItemSplashModel"/>
+    </data>
+    <ImageButton
+        android:background="@drawable/rectangle_bg_gray_900_radius_16"
+        android:id="@+id/btnSettings"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20pxv"
+        android:layout_marginEnd="@dimen/_139pxh"
+        android:layout_marginStart="@dimen/_139pxh"
+        android:layout_marginTop="@dimen/_192pxv"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="@dimen/_31pxh"
+        android:paddingVertical="@dimen/_31pxv"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_settings" tools:ignore="ContentDescription"/>
+</layout>

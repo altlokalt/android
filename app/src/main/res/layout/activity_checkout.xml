@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="checkoutVM" type="com.altlokaltsapplication.app.modules.checkout.data.viewmodel.CheckoutVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearCheckout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <androidx.appcompat.widget.Toolbar android:gravity="start"
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearNavbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylegray_50">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_17pxh"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginStart="@dimen/_22pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_width="@dimen/_10pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrderSummary"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_13pxv"
+                    android:layout_marginStart="@dimen/_87pxh"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_weight="0.83"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtOrderSummary}"
+                    style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_order_summary"/>
+                <ImageView android:id="@+id/imageUpload"
+                    android:layout_height="@dimen/_18pxh"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_19pxh"
+                    android:layout_marginStart="@dimen/_84pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_width="@dimen/_18pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_upload"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_upload"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTabs"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearTab"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.64" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDelivery"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtDelivery}"
+                    style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_delivery"/>
+                <View android:background="@color/gray_900"
+                    android:id="@+id/lineLabel"
+                    android:layout_height="@dimen/_4pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_3pxv" android:layout_width="@dimen/_69pxh"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearTab1"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.36" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPickUp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtPickUp}"
+                    style="@style/txtPoppinsregular16_1" tools:text="@string/lbl_pick_up"/>
+                <View android:background="@color/gray_50"
+                    android:id="@+id/lineLabelOne"
+                    android:layout_height="@dimen/_4pxv"
+                    android:layout_marginTop="@dimen/_3pxv" android:layout_width="@dimen/_58pxh"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerCheckout"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_25pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_checkout"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearForm"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPromoCode"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{checkoutVM.checkoutModel.txtPromoCode}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_promo_code"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/lbl_card_detail"
+                android:id="@+id/textInputLayEnterPromoCod"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_14pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_weight="0.74" android:layout_width="0dp"
+                android:textColorHint="@color/black_900" style="@style/txtRoundedOutline_1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/etEnterPromoCod"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@={checkoutVM.checkoutModel.etEnterPromoCodValue}"
+                    android:textColor="@color/gray_400"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="normal" tools:text="@string/msg_enter_promo_cod"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearForm1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPaymentMethod"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{checkoutVM.checkoutModel.txtPaymentMethod}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_payment_method"/>
+            <LinearLayout android:id="@+id/linearForm2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius_2">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_weight="0.95"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{checkoutVM.checkoutModel.txtPrice}"
+                    style="@style/txtPoppinsregular16" tools:text="@string/msg_visa_xxxx_xxx"/>
+                <Spinner android:id="@+id/spinnerArrowright"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_22pxh"
+                    android:layout_marginStart="@dimen/_110pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_weight="0.05"
+                    android:layout_width="0dp" tools:listitem="@layout/spinner_item"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearItem"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_14pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius_1">
+            <TextView android:id="@+id/txtSubtotalPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_weight="0.68" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:text="@{checkoutVM.checkoutModel.txtSubtotalPrice}"
+                style="@style/txtPoppinsregular16_3" tools:text="@string/msg_sub_total_price"/>
+            <TextView android:id="@+id/txtPriceOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_172pxh"
+                android:layout_weight="0.32" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:text="@{checkoutVM.checkoutModel.txtPriceOne}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/msg_26_29_8_none"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnCheckout"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/lbl_checkout"
+            android:textAllCaps="false" style="@style/btnSolidRounded" tools:text="@string/lbl_checkout"/>
+    </LinearLayout>
+</layout>
