@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="orderSuccesVM" type="com.altlokaltsapplication.app.modules.ordersucces.data.viewmodel.OrderSuccesVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearOrderSucces"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <FrameLayout
+            android:background="@drawable/rectangle_bg_gray_300_radius_16"
+            android:gravity="center_horizontal"
+            android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_96pxv"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtOrderSuccessfu"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_22pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_13pxh"
+            android:singleLine="true"
+            android:text="@{orderSuccesVM.orderSuccesModel.txtOrderSuccessfu}"
+            style="@style/txtPoppinsbold24" tools:text="@string/msg_order_successfu"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDuration"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_9pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:text="@{orderSuccesVM.orderSuccesModel.txtDuration}"
+            style="@style/txtPoppinsregular16" tools:text="@string/msg_thank_you_for_o"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnExploreRecipe"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_35pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/lbl_explore_recipe"
+            android:textAllCaps="false" style="@style/btnSolidRounded" tools:text="@string/lbl_explore_recipe"/>
+    </LinearLayout>
+</layout>

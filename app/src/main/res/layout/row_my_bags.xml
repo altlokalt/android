@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myBagsRowModel" type="com.altlokaltsapplication.app.modules.mybags.data.model.MyBagsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+        <View
+            android:background="@drawable/rectangle_bg_gray_300_radius_8"
+            android:id="@+id/viewImageOne"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_marginBottom="@dimen/_21pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_21pxv" android:layout_width="@dimen/_40pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearContent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_14pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_weight="0.57" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{myBagsRowModel.txtLanguageOne}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_italian_sausage"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{myBagsRowModel.txtPrice}"
+                style="@style/txtPoppinsregular16" tools:text="@string/lbl_2_34"/>
+        </LinearLayout>
+        <Spinner android:id="@+id/spinnerCount"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_28pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_28pxv"
+            android:layout_weight="0.29" android:layout_width="0dp" tools:listitem="@layout/spinner_item"/>
+    </LinearLayout>
+</layout>

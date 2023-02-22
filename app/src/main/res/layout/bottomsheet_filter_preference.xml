@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="filterPreferenceVM" type="com.altlokaltsapplication.app.modules.filterpreference.data.viewmodel.FilterPreferenceVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearFilter"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearPopUp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_50">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFilter"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_13pxh"
+                android:singleLine="true"
+                android:text="@{filterPreferenceVM.filterPreferenceModel.txtFilter}"
+                style="@style/txtPoppinsbold24" tools:text="@string/lbl_filter"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtMeal"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{filterPreferenceVM.filterPreferenceModel.txtMeal}"
+                style="@style/txtPoppinsregular16" tools:text="@string/lbl_meal"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerListtab"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_listtab"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnSnacks"
+                android:layout_height="@dimen/_37pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="@dimen/_93pxh"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_snacks"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded_3" tools:text="@string/lbl_snacks"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCuisine"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_13pxv"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{filterPreferenceVM.filterPreferenceModel.txtCuisine}"
+                style="@style/txtPoppinsregular16" tools:text="@string/lbl_cuisine"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerListtabOneTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="5" tools:listitem="@layout/row_listtab_one_two"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnContinue"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_51pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_continue"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_continue"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

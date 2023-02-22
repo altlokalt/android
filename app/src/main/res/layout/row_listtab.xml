@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listtabRowModel" type="com.altlokaltsapplication.app.modules.filterpreference.data.model.ListtabRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTabs"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtTab"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4" android:layout_width="0dp"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_5pxv" android:singleLine="true"
+            android:text="@{listtabRowModel.txtTab}"
+            style="@style/txtSolidRounded_1" tools:text="@string/lbl_breakfast"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTabOne"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_weight="0.29" android:layout_width="0dp"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:paddingBottom="@dimen/_6pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_6pxv" android:singleLine="true"
+            android:text="@{listtabRowModel.txtTabOne}"
+            style="@style/txtSolidRounded_1" tools:text="@string/lbl_lunch"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTabTwo"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_weight="0.31" android:layout_width="0dp"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_5pxv" android:singleLine="true"
+            android:text="@{listtabRowModel.txtTabTwo}"
+            style="@style/txtSolidRounded_1" tools:text="@string/lbl_dinner"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onboardingVM" type="com.altlokaltsapplication.app.modules.onboarding.data.viewmodel.OnboardingVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearOnboarding"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <FrameLayout android:gravity="start"
+            android:id="@+id/frameStackcar"
+            android:layout_height="@dimen/_432pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageImagePlacehold"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_432pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_imageplacehold"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_imageplacehold"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorCar"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_147pxh"
+                android:layout_marginStart="@dimen/_147pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="wrap_content"
+                app:drawable_normal="@drawable/indicator_unselected_bg_bluegray_100_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_bluegray_400_radius_8"
+                app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_16pxh"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtRecipeBook"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_51pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_110pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_13pxh"
+            android:singleLine="true"
+            android:text="@{onboardingVM.onboardingModel.txtRecipeBook}"
+            style="@style/txtPoppinsbold24" tools:text="@string/lbl_recipebook"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnGetStarted"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_51pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_7pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/lbl_get_started"
+            android:textAllCaps="false" style="@style/btnSolidRounded" tools:text="@string/lbl_get_started"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtConfirmation"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_51pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_23pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_8pxh"
+            android:singleLine="true"
+            android:text="@{onboardingVM.onboardingModel.txtConfirmation}"
+            style="@style/txtPoppinsregular16" tools:text="@string/msg_already_have_an"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchReceipeVM" type="com.altlokaltsapplication.app.modules.searchreceipe.data.viewmodel.SearchReceipeVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnsearch"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_16pxh"
+        android:layout_marginStart="@dimen/_16pxh"
+        android:layout_marginTop="@dimen/_16pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearNavbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearForm"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                    <LinearLayout android:id="@+id/linearRowsearch"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_17pxh"
+                        android:layout_marginTop="@dimen/_15pxv"
+                        android:layout_weight="0.66"
+                        android:layout_width="0dp" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageSearch"
+                            android:layout_height="@dimen/_19pxh"
+                            android:layout_marginBottom="@dimen/_1pxv"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_width="@dimen/_19pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_search_gray_400"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_search_gray_400"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtChicken"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18pxh"
+                            android:layout_weight="0.78"
+                            android:layout_width="0dp"
+                            android:letterSpacing="0.0"
+                            android:lineSpacingExtra="@dimen/_8pxh"
+                            android:singleLine="true"
+                            android:text="@{searchReceipeVM.searchReceipeModel.txtChicken}"
+                            style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_chicken"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearRowclose"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_18pxv"
+                        android:layout_marginEnd="@dimen/_19pxh"
+                        android:layout_marginStart="@dimen/_143pxh"
+                        android:layout_marginTop="@dimen/_19pxv"
+                        android:layout_weight="0.34"
+                        android:layout_width="0dp" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageClose"
+                            android:layout_height="@dimen/_13pxh"
+                            android:layout_marginBottom="@dimen/_2pxv"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_width="@dimen/_13pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_close"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+                        <ImageView android:id="@+id/imageFilter"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_marginStart="@dimen/_24pxh"
+                            android:layout_width="@dimen/_18pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_filter"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_filter"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearSearchOne"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylegray_50">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearResult"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImage"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguage"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguage}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageOne"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageOne"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageOne}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageTwo"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageTwo}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageThree"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageThree"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageThree}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem4"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageFour"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageFour"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageFour}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageFive"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageFive"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageFive}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem6"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageSix"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageSix"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_25pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageSix}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearItem7"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                    <View
+                        android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                        android:id="@+id/viewImageSeven"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_40pxh"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguageSeven"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_23pxv"
+                        android:layout_marginEnd="@dimen/_38pxh"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_24pxv"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{searchReceipeVM.searchReceipeModel.txtLanguageSeven}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/msg_italian_spaghet"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

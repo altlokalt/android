@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.altlokaltsapplication.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.altlokaltsapplication.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.guidestwo.ui.GuidesTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.videos.ui.VideosActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.guidesone.ui.GuidesOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.detailingridientssteps.ui.DetailIngridientsStepsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.createrecipe.ui.CreateRecipeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.mybags.ui.MyBagsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.checkout.ui.CheckoutActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.interestpageone.ui.InterestPageOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.detailingridientscalories.ui.DetailIngridientsCaloriesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.detailingridientsreviews.ui.DetailIngridientsReviewsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.interestpagetwo.ui.InterestPageTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.cookexperimentfindreceipe.ui.CookExperimentFindReceipeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.home.ui.HomeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.ordersucces.ui.OrderSuccesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.searchingridients.ui.SearchIngridientsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.interestpagethree.ui.InterestPageThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.searchreceipe.ui.SearchReceipeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.myprofile.ui.MyProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.editavatar.ui.EditAvatarActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.setting.ui.SettingActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.myfavourites.ui.MyFavouritesActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.altlokaltsapplication.app.modules.onboarding.ui.OnboardingActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.altlokaltsapplication.app.modules.cookexperimentfitsreceipe.ui.CookExperimentFitsReceipeActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

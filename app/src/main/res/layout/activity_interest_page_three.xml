@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestPageThreeVM" type="com.altlokaltsapplication.app.modules.interestpagethree.data.viewmodel.InterestPageThreeVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearInterestPageT"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <LinearLayout android:id="@+id/linearNavbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearProgress"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_24pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_weight="0.77" android:layout_width="0dp"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+                <View
+                    android:background="@drawable/rectangle_bg_gray_900_radius_4"
+                    android:id="@+id/viewBar"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_8pxv" android:layout_width="@dimen/_120pxh"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtSkip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_14pxv"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_187pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_weight="0.23" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtSkip}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_skip"/>
+        </LinearLayout>
+        <TextView android:gravity="start"
+            android:id="@+id/txtWhatkindoffo"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_20pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{interestPageThreeVM.interestPageThreeModel.txtWhatkindoffo}"
+            style="@style/txtPoppinsbold24" tools:text="@string/msg_what_kind_of_fo"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImage"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtAsian"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_239pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_weight="0.66" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtAsian}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_asian"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImageOne"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_233pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_weight="0.69" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtLanguage}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_italian"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem2"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImageTwo"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMexican"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_216pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_weight="0.75" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtMexican}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_mexican"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem3"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImageThree"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_250pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_weight="0.6" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtLanguageOne}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_thai"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem4"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImageFour"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageTwo"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_14pxv"
+                android:layout_marginEnd="@dimen/_234pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_weight="0.69" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtLanguageTwo}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_malay"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem5"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImageFive"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageThree"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_219pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_15pxv"
+                android:layout_weight="0.74" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtLanguageThree}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_chinese"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearItem6"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+            <View
+                android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                android:id="@+id/viewImageSix"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_16pxv"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHealtyFood"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_14pxv"
+                android:layout_marginEnd="@dimen/_189pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_17pxv"
+                android:layout_weight="0.8" android:layout_width="0dp"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:singleLine="true"
+                android:text="@{interestPageThreeVM.interestPageThreeModel.txtHealtyFood}"
+                style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_healty_food"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameStackcountry"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_69pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_3pxv" android:layout_width="@dimen/_343pxh">
+            <LinearLayout android:id="@+id/linearItem7"
+                android:layout_gravity="bottom|start"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylegray_52cornerRadius">
+                <View
+                    android:background="@drawable/rectangle_bg_gray_300_radius_8"
+                    android:id="@+id/viewImageSeven"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv" android:layout_width="@dimen/_24pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCountry"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_13pxv"
+                    android:layout_marginEnd="@dimen/_234pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_18pxv"
+                    android:layout_weight="0.69"
+                    android:layout_width="0dp"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@{interestPageThreeVM.interestPageThreeModel.txtCountry}"
+                    style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_japan"/>
+            </LinearLayout>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_gray_900_radius_8"
+                android:id="@+id/btnArrowright"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_64pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_width="@dimen/_64pxh"
+                android:paddingHorizontal="@dimen/_23pxh"
+                android:paddingVertical="@dimen/_23pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrowright" tools:ignore="ContentDescription"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

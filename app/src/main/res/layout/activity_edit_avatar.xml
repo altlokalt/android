@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="editAvatarVM" type="com.altlokaltsapplication.app.modules.editavatar.data.viewmodel.EditAvatarVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameEditAvatar"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylegray_50">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="top|start"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearNavbar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylegray_50">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_17pxh"
+                        android:layout_marginBottom="@dimen/_19pxv"
+                        android:layout_marginStart="@dimen/_22pxh"
+                        android:layout_marginTop="@dimen/_19pxv"
+                        android:layout_width="@dimen/_10pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAvatarProfile"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_16pxv"
+                        android:layout_marginStart="@dimen/_98pxh"
+                        android:layout_marginTop="@dimen/_15pxv"
+                        android:layout_weight="0.8"
+                        android:layout_width="0dp"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_8pxh"
+                        android:singleLine="true"
+                        android:text="@{editAvatarVM.editAvatarModel.txtAvatarProfile}"
+                        style="@style/txtPoppinsbold16_1" tools:text="@string/lbl_avatar_profile"/>
+                    <ImageView android:id="@+id/imageCheckmark"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_marginBottom="@dimen/_20pxv"
+                        android:layout_marginEnd="@dimen/_19pxh"
+                        android:layout_marginStart="@dimen/_94pxh"
+                        android:layout_marginTop="@dimen/_23pxv"
+                        android:layout_width="@dimen/_17pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_checkmark_12x17"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_12x17"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:id="@+id/linearRowcheckmarkOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearSelectedAvatar"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.33"
+                    android:layout_width="0dp"
+                    android:orientation="vertical" style="@style/groupStylegray_300cornerRadius">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_gray_900_radius_20"
+                        android:id="@+id/btnCheckmarkOne"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_marginStart="@dimen/_10pxh"
+                        android:layout_marginTop="@dimen/_40pxv"
+                        android:layout_width="@dimen/_40pxh"
+                        android:paddingHorizontal="@dimen/_11pxh"
+                        android:paddingVertical="@dimen/_11pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_checkmark_40x40" tools:ignore="ContentDescription"/>
+                </LinearLayout>
+                <View
+                    android:background="@drawable/rectangle_bg_gray_300_radius_40"
+                    android:id="@+id/viewAvatar"
+                    android:layout_height="@dimen/_80pxh"
+                    android:layout_marginStart="@dimen/_37pxh" android:layout_width="@dimen/_80pxh"/>
+                <View
+                    android:background="@drawable/rectangle_bg_gray_300_radius_40"
+                    android:id="@+id/viewAvatarOne"
+                    android:layout_height="@dimen/_80pxh"
+                    android:layout_marginStart="@dimen/_37pxh" android:layout_width="@dimen/_80pxh"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerEditAvatar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_32pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_32pxh}" tools:itemCount="2" tools:listitem="@layout/row_edit_avatar"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnUseYourOwnPhotoOne"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_288pxv"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/msg_use_your_own_ph"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/msg_use_your_own_ph"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>
